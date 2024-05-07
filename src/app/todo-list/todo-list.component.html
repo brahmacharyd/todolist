@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <h1 class="text-center mt-5">Todo List</h1>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" [(ngModel)]="newTodo" placeholder="Enter a new task">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="addTodo()">Add</button>
+          </div>
+        </div>
+        <ul class="list-group">
+          <li *ngFor="let todo of todos" class="list-group-item">
+            {{ todo }}
+            <button class="btn btn-sm btn-danger float-right" (click)="removeTodo(todo)">Remove</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
